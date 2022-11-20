@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+				<meta charset="UTF-8">
+				<title>CRUD javascript </title>
+	<style>
+				
+				
+					input[type=text]{
+					width:100%;
+					
+					paddding:12px 20px;
+					margin:8px 0;
+					display:inline-block;
+					border:1px solid #ccc;
+					border-radius:4px;
+					box-sizing:border-box;
+					
+					}
+					.login{
+					  width:100%;
+					  background-color:#4caf50;
+					  color: white;
+					  padding:14px 20px;
+					  margin:8px 0;
+					  border-radius:4px;
+					  cursor:pointer;
+					  }
+					  .login:hover{
+					  background-color:#45a049;
+					  }
+					  div{
+					  border-radius:5px;
+					  background-color:#f2f2f2;
+					  padding:20px;
+					  
+					  }
+					  .kotak{
+					  width:350px;
+					  margin:20px auto 80px auto;
+					  }
+					  
+					  h1{
+					  text-align:center;
+					  margin:80px auto 0 auto;
+					  font-size:16px;
+					  
+					   }
+					   .ket{
+					    text-align:center;
+					  margin:80px auto 0 auto;
+					  font-size:16px;
+					   }
+					   
+					.done{text-decoration:line-through;};
+	</style>
+
+</head>
+<body>
+				
+				<h1>Aplikasi to do list</h1>
+				
+		<div class="kotak">
+						<form action="#">
+										<label>Nama kegiatan</label>
+										<input type="text"id="new_text"placeholder="masukkan aktivitas yang ingin anda lakukan"
+										>
+										<hr>
+										<label class="ket">ketuk ikon [x]untuk menghapus</label><br>
+										
+										<hr>
+										<label>ketuk teks untuk mencoret aktivitas yang sudah dilakukan</label>
+										<hr>
+										
+										<button class="login"
+									 onclick="add()">Tambah
+										
+										</button>
+										<hr>
+										
+						</form>
+						<ul id="todo">
+										
+						</ul>
+						<script>
+										const todo=document.getElementById("todo");
+										function add(){
+									let newText=document.getElementById("new_text");
+      let newTodo ="<li> <span onclick='toggle(this)'>"+newText.value+"</span>"+
+      "<span onclick='removeItem(this)'>[x]</span>"
+      +"</li>"
+      todo.insertAdjacentHTML('afterbegin', newTodo);
+      //kosongkan field
+      newText.value="";
+      
+										};
+							function toggle(el){
+							el.classList.toggle('done');
+							
+							
+							}
+							function removeItem(el){
+							el.parentElement.remove();
+							
+							}
+						</script>
+						
+		</div>		
+		
+</body>
+</html>
