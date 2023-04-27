@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<body>
+    <div id="app"> 
+      
+							<div class="container">
+							<h4 class="text-center"> UKUR JARAK
+							  </h4>	
+							  <hr>
+							  </hr>
+							  <form method="POST" action=" ">
+							  	<div class="form-group">
+							  
+						  <label>Kilometer</label>
+				  <input type="text" name="kilometer "class="form-control" v-on:keyup.enter='finish()'
+				  v-model="kilometers"
+				  placeholder="masukkan Jarak dlm KM disini">
+							  	</div>
+							  	<div class="form-group">
+							  		
+						  <label>Meters</label>
+				 
+				  				   	 <input type="text" name="kilometer "class="form-control"v-on:keyup.enter='finish2()' v-model="meters"placeholder="masukkan Jarak dlm Meter disini"> 			  
+</body>
+</html>
+    <script>
+    var app = new Vue({
+el: '#app',
+data: {
+kilometers:0,
+meters:0
+},
+
+methods: {
+finish:function (params) {
+    alert('anda telah memasukkan data');
+},
+finish2:function (params) {
+    alert('anda telah memasukkan data');
+}
+
+},
+
+computed:{
+    
+},
+watch:{
+   kilometers:function(val){
+       this.kilometers =val;
+       this.meters =val*1000;
+   },
+   meters:function(val){
+       this.kilometers =val/1000;
+       this.meters=val;
+   }
+   
+}
+
+
+
+
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+
+</body>
+</html>
+
+

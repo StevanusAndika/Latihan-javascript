@@ -1,0 +1,10 @@
+span{    
+ background: red;    
+  display: inline;   
+    padding: 10px;   
+    color: #fff;   
+   margin: 10px 0;
+    }
+    .warna span {  
+     background: yellow;
+   } 

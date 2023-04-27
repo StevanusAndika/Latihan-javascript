@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<body>
+    <div id="app1">
+     <!-- panggil komponen yg telah dibuat -->
+     <testing></testing>
+</div>
+<div id="app2">
+  
+</div>
+ <script>
+     Vue.component('testing', {
+  template: '<p>hai, ini adalah komponen yang dibuat oleh {{nama}}<button v-on:click="rubahNama">ubah Nama</button> </p> ',
+  data: function () {
+    return {
+      nama: 'Stevanus',
+    }
+  },
+  //lakukan method berubah nama
+  methods: {
+    rubahNama: function () {
+      this.nama = 'Andika'
+    }
+  }
+});
+//deklarasi class vue
+new Vue({
+  el: '#app1',
+  data: {
+  },
+});
+
+new Vue({
+  el: '#app2',
+  data: {
+
+  },
+});
+
+
+
+
+ </script>
+</body>
+</html>
+
