@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<body>
+    <div id="app1"> 
+        
+        <h2>{{title}}</h2>
+        {{isi}}
+</div>
+<div id="app2"> 
+    <!-- manipulasi data yg ada di app1 di app2 -->
+        <h3>{{title}}</h3>
+        <br>
+        <br>
+       
+        <button v-on:click="ubah1">Ubah Data title</button>
+</div>
+    <script>
+        alert("tekan tombolnya bro,biar tau hasil perubahannya");
+    var satu= new Vue({
+el: '#app1',
+data: {
+title:'Judul pertama',
+},
+methods:{
+    
+},
+computed:{
+    isi:function(){
+      return "isi dari class App1,hanya akan terlihat di App1";
+    },
+},
+});
+
+var dua = new Vue({
+el: '#app2',
+data: {
+title:'Judul Kedua',
+},
+methods:{
+    ubah1:function(){
+        satu.title="Judul app telah berubah total";
+    },
+},
+computed:{
+    
+},
+});
+/*jika ingin ubah dari luar instansiasi
+dua.title="judul title dua telah diubah dsri luar instansiasi";*/
+</script>
+</body>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<body>
+  <h2>props</h2>
+    <div id="app1">
+<!--Props berfungsi untuk berkomunikasi dari parent ke child/dari komponen satu ke komponen lainnya-->
+<!--buat komponen yg telah dideklarasikan,binding dataprops kemudian binding isi dari dataprops-->
+<komponenprops :dataprops='isiprops'></komponenprops>
+<br>
+<h3>props child</h3>
+<komponenvalidasi v-bind:dataprops='isiprops'></komponenvalidasi>
+
+</div>
+    <script>
+    Vue.component('komponenprops',{
+      props:['dataprops'],
+      template:'<div>{{dataprops}}</div>'
+    });
+Vue.component('komponenvalidasi',{
+      props:{
+        dataprops:{
+          type:String,
+          required:true,
+        }
+      },
+      template:'<div>{{dataprops}} yang muncul dari komponen validasi</div>'
+    });
+    
+    var app = new Vue({
+el: '#app1',
+data: {
+isiprops:'Pesan dari props',
+},
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<body>
+    <div id="app1">
+      <h1>Data parent</h1>
+      <!--buat div untuk mengatur ukuran hurufnya-->
+ <div :style="{ fontSize: postFontSize + 'em'}">
+   
+   <!--Perjalanan kirim data dari element child ke parent-->
+
+  <blog-test title="perjalanan dengan vue "></blog-test>
+
+  <blog-test title="perjalanan dengan vuejs"></blog-test>
+
+  <blog-test title="coding vuejs"></blog-test>
+  
+
+
+  <hr>
+  <h2>Data child</h2>
+      <!--buat komponen yang telah dideklarasikan
+      lakukan pengulangan  pada data di new vue,tampilkan id,judul dan isi konten,buat tombol untuk perbesar teks element child ke parent
+      -->
+            <blog-post v-on:perbesar="postFontSize += 0.1" v-for="post in posts" v-bind:id="post.id" v-bind:title="post.title" v-bind:content="post.content"></blog-post>
+</div>
+</div>
+    <script>
+Vue.component('blog-test', {
+  props: ['title'],
+  template: "<div><h1>{{ title }}</h1></div>",
+});
+
+Vue.component('blog-post', {
+  props: ['id', 'title', 'content'],
+  template: "<div><h1>{{id}}.{{ title }}</h1><h3>{{content}}</h3><button v-on:click='pencet'>perbesar text</button></div>",
+  /*pada saat tombol perbesar teks dilik
+  jalankan fungsi pencet yg mengubah element child ke parent
+   */
+  methods: {
+    pencet: function () {
+      this.$emit("perbesar");
+      // this.title = "nilai baru" ;
+      // this.$emit("namaemitnya", this.title);
+    }
+  }
+});
+
+
+
+new Vue({
+  el: '#app1',
+  data: {
+    posts: [
+      { id: 1, title: 'perjalanan dengan vue', content: 'ini content testing' },
+      { id: 2, title:'perjalanan dengan vuejs', content: 'ini content testing' },
+      { id: 3, title: 'coding vuejs', content: 'ini content testing' },
+    ],
+    postFontSize: 1,
+    //postFontSize bernilai true,yg artinya perbesar teks berhasil
+  }
+});
+
+     </script>
+     
+</body>
+</html>
+

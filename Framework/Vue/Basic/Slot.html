@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<body>
+  <!--Slot pada Vue.js adalah sebuah fitur yang memungkinkan kita untuk memasukkan konten ke dalam sebuah komponen dari luar komponen itu sendiri. Dalam hal ini, komponen tersebut bertindak sebagai wadah atau kerangka yang dapat diisi dengan konten yang diberikan.-->
+  
+    <div id="app1">
+<div>
+<form-helper>
+<div slot="form-header">
+  <h3>Judul Form</h3>
+  <p>Ini info Tentang Form</p>
+</div>
+<div slot="form-isi">
+  
+<input type="text" class="form-control" name="nama" placeholder="Isi Nama Anda...">
+
+<input type="password" class="form-control" name="password" placeholder="Isi Password Anda...">
+
+
+
+
+</div>
+<div slot="form-button">
+  <button class="btn btn-primary">Submit Button</button>
+</div>
+</form-helper>
+</div>
+</div>
+    <script>
+Vue.component('form-helper', {
+  
+  template:`
+   <div>
+   <div class="jumbotron">
+
+  
+   <div class="form-control">
+   <slot name="form-header"></slot>
+   </div>
+   <div class="form-control">
+   <slot name="form-isi"></slot>
+   </div>
+
+   <div class="form-control">
+ <slot name="form-button"></slot>
+ </div>
+ 
+   </div>
+   </div>`,
+  
+});
+
+    
+    
+    
+    
+    var app = new Vue({
+el: '#app1',
+data: {
+}
+})
+</script>
+
+</body>
+

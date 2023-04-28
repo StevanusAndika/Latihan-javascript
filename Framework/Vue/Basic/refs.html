@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<body>
+    <h2>REFS</h2>
+    
+    <div id="app1">
+        <input type="text"ref="inputref"placeholder="ketik makanan favoritmu">
+        <button v-on:click="deteksi">Input</button>
+        <p>Makanan Favoritmu adalah : {{makananfavorit}}</p>
+        <div ref="test">ini dalam test</div>
+        
+</div>
+    <script>
+        //refs berfungsi mengambil value dari data atribut yg telah kita buat
+    var app = new Vue({
+el: '#app1',
+data: {
+makananfavorit: ' ',
+},
+methods:{
+    deteksi:function(){
+        console.log(this.$refs);
+        console.log(this.$refs.inputref.value);
+   this.makananfavorit=this.$refs.inputref.value;
+   
+   console.log(this.$refs.test.innerText);
+    },
+},
+});
+</script>
+</body>
+

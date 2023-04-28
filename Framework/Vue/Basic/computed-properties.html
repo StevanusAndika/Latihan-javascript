@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<body>
+    <div id="app"> 
+        <input v-model='nama' placeholder="masukkan nama"  type="text"/>
+        <br>
+        <br>
+        <input v-model='alamat' placeholder="masukkan alamat" type="text"/>
+       <h3>{{Hasil}}</h3>
+       <!-- buat teks input dengan v-model uang1 -->
+       <!-- data yg masuk akan diolah di computed, sehingga menampilkan hasil yg dinamis -->
+       <input v-model='uang1'
+      placeholder="masukkan tambah uang1" type="text"/>
+      <!-- tampilkan hasil render -->
+      <h3>Saldo uang anda sekarang:Rp.{{HasilUang}}</h3>
+    <script>
+    var app = new Vue({
+el: '#app',
+data: {
+nama : '',
+alamat:'',
+uang1:0,
+},
+
+methods: {
+
+},
+computed :{
+Hasil:function(){
+    return this.nama+'dengan alamat'+this.alamat;
+},
+//apa yg diinput pada v-model uang1 akan bertambah 400
+
+HasilUang:function(){
+    return parseInt(this.uang1)+400;
+},
+    
+}
+
+
+
+
+})
+</script>
+</body>
+
+
+</body>
+</html>
+
+

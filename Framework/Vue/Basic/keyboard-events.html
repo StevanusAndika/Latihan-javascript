@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<body>
+    <div id="app"> 
+        <input placeholder="masukkan nama"v-on:keyup='kliknama()'typee="text"/>
+        <input placeholder="masukkan alamat"v-on:keyup.enter='klikalamat()'typee="text"/>
+    <script>
+    var app = new Vue({
+el: '#app',
+data: {
+},
+
+methods: {
+kliknama:function(params){
+
+alert('anda telah menginput data');
+},
+klikalamat:function(params){
+  alert('anda telah menginput data hingga selesai,tak ada lagi data yg perlu diinput');
+}
+}
+
+
+
+
+})
+</script>
+</body>
+
+
+</body>
+</html>
+
+

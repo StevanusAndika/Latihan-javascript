@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vuejs</title>
+</head>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<style>
+span{
+    background: red;
+    display: inline;
+    padding: 10px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.warna span{
+    background: yellow;
+}
+
+.sebelahan span:after{
+    content: "ini content sebelah";
+    margin-left: 10px;
+}
+</style>
+
+
+<body>
+    <div id="app"> 
+      <h2>Contoh1</h2>
+      <div v-bind:class="{red:true}"></div>
+       <div v-bind:class="{red:false}"></div>
+       
+        <div v-bind:class="{red:false,blue:true}"></div>
+        <div v-on:click="warna=!warna" v-bind:class="{warna:warna}">
+            <span>Stevanus</span>
+        </div>
+        
+               <h2>Contoh 2</h2>
+            <button v-on:click="sebelahan=!sebelahan">toogle sebelahan</button>
+            <button v-on:click="warna=!warna">toogle warna</button>
+<br><br>
+            <div v-bind:class=kelasComputed>
+                <span>Stevanus</span>
+            </div>
+
+							</div>
+
+    <script>
+    var app = new Vue({
+el: '#app',
+data: {
+sebelahan:false,
+warna:false,
+},
+
+methods: {
+
+
+},
+computed:{
+            kelasComputed:function(){
+                return{
+                    warna:this.warna,
+                    sebelahan:this.sebelahan
+                }
+           
+             }   
+        },
+
+watch:{
+   
+},
+
+
+
+
+});
+</script>
+</body>
+</html>
+
+
