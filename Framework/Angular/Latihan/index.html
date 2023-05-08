@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Contoh AngularJS | ng-repeat</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/projectController.js"></script>
+  <script src="js/vehiclesController.js"></script>
+</head>
+<body>
+  <div ng-controller="ProjectController">
+    Include {{template.name}}
+
+    <hr />
+    <input type="search" ng-model="varFilter"/>
+    <div ng-repeat="vehicle in vehicles | filter:varFilter as results">
+      Jenis {{vehicle.type}}={{vehicle.wheel}} roda
+      </br>
+      <hr/>
+    </div>
+    <div ng-include="template.url"></div>
+  </div>
+</body>
+</html>

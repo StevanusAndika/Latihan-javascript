@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Contoh AngularJS | ng-repeat</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    angular.module('myApp', [])
+      .controller('ProjectController', function($scope) {
+        $scope.vehicles = [
+          {type: "Mobil", wheel: 4},
+          {type: "Motor", wheel: 2},
+          {type: "Sepeda", wheel: 2},
+          {type: "Bajaj", wheel: 3}
+        ];
+      });
+  </script>
+</head>
+<body>
+  <div ng-controller="ProjectController">
+    <ul>
+      <li ng-repeat="vehicle in vehicles">{{vehicle.type}}={{vehicle.wheel}} roda.</br>
+      </hr>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

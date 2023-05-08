@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh ng-click</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script>
+		var app = angular.module("myApp", []);
+		app.controller("myCtrl", function($scope) {
+			$scope.var1= "Stevanus Andika";
+      $scope.var2= "Galih Setiawan";
+			$scope.clickEvent = function(params1,params2) {
+				$scope.result = params1+ " "+params2;
+			}
+		});
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<input type="text"ng-model="var1"/></br>
+  <input type="text"ng-model="var2"/></br>
+	
+	<button ng-click="clickEvent(var1,var2)">Submit</button></br>
+	hasil : {{result}}
+</body>
+</html>

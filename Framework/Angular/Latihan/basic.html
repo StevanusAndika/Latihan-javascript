@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Contoh AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+  angular.module('myApp', []);
+angular.module('myApp')
+  .controller('ProjectController', function($scope) {
+    $scope.message= "Angular pertamaku!";
+  });
+
+  </script>
+</head>
+<body>
+  <div ng-controller="ProjectController">
+    <h1>{{message}}</h1>
+  </div>
+</body>
+</html>

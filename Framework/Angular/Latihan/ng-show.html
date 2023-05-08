@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Contoh ng-show dengan checkbox</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myController">
+  <label>
+    <input type="checkbox" ng-model="showText"> Tampilkan Text
+  </label>
+  <br>
+  <div ng-show="showText">
+    Ini adalah contoh teks yang akan muncul jika checkbox diatas dicentang.
+    
+      nama saya Stevanus
+  </div>
+  <script>
+    angular.module('myApp', [])
+      .controller('myController', function($scope) {
+        $scope.showText = false;
+      });
+  </script>
+</body>
+</html>

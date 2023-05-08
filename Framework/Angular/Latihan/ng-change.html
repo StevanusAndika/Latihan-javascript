@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>Checkbox Counter Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="myCtrl">
+
+  <h1>Checkbox Counter Example</h1>
+
+  <input type="checkbox" ng-model="checkbox1" ng-change="count()">
+  <label>Checkbox 1</label>
+  <br>
+  <input type="checkbox" ng-model="checkbox2" ng-change="count()">
+  <label>Checkbox 2</label>
+  <br>
+  <input type="checkbox" ng-model="checkbox3" ng-change="count()">
+  <label>Checkbox 3</label>
+  <br>
+  <p>Total checked: {{counter}}</p>
+
+  <script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+      $scope.checkbox1 = false;
+      $scope.checkbox2 = false;
+      $scope.checkbox3 = false;
+
+      $scope.counter = 0;
+
+      $scope.count = function() {
+        $scope.counter = 0;
+
+        if ($scope.checkbox1) {
+          $scope.counter++;
+        }
+        if ($scope.checkbox2) {
+          $scope.counter++;
+        }
+        if ($scope.checkbox3) {
+          $scope.counter++;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
