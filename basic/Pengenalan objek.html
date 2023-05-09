@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+<!--Javascript eksternal-->
+<script src ="index.js"></script>
+</head>
+<body>
+<p>
+Contoh javascript
+</p>
+<!-- elemenf memasukkan javascript internal-->
+
+<script>
+/* 
+Membuat objek kucing dengan properti kaki, nama, dan warna
+Mengakses properti objek kucing menggunakan dot notation. 
+
+*/
+var kucing = {
+  "kaki": 4,
+  "nama": "Oyen",
+  "warna": "coklat"
+};
+
+// Mengakses properti objek
+console.log(kucing.kaki);
+//menghasilkan nilai 4
+console.log(kucing.nama);
+//menghasilkan nama kucing oyen
+console.log(kucing.warna);
+//menghasilkan warna kucing yaitu coklat
+
+//jika ingin mengakses seluruh key
+console.log(Object.keys(kucing))
+</script>
+</body>
+</html>
