@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+<!--Javascript eksternal-->
+<script src ="index.js"></script>
+</head>
+<body>
+<p>
+Contoh javascript
+</p>
+<!-- elemenf memasukkan javascript internal-->
+
+<script>
+/* 
+
+Kode tersebut membuat sebuah objek bernama `hari` dengan tiga properti: `namahari`, `namabulan`, dan `waktu`. Properti `namahari` dan `namabulan` berisi string "senin" dan "Agustus" secara berturut-turut, sedangkan properti `waktu` berisi sebuah anonymous function object atau fungsi tanpa nama yang mengembalikan string "siang" ketika dipanggil.
+
+Anonymous function objects adalah fungsi yang dibuat tanpa nama dan dapat disimpan sebagai variabel atau properti dalam objek. Dalam kasus ini, fungsi anonymous tersebut disimpan dalam properti `waktu` pada objek `hari`. Fungsi ini dapat dipanggil dengan menggunakan sintaks `hari.waktu()`, dan akan mengembalikan nilai "siang". Hal ini dapat berguna dalam pengembangan aplikasi web yang membutuhkan penggunaan fungsi yang hanya digunakan pada satu objek atau satu kali pemanggilan.
+
+*/
+var hari = {
+  "namahari": "senin",
+  "namabulan": "Agustus",
+  "waktu": function() {
+    return "siang";
+  }
+};
+
+console.log(hari.namahari);
+console.log(hari.waktu());
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+<!--Javascript eksternal-->
+<script src ="index.js"></script>
+</head>
+<body>
+<p>
+Contoh javascript
+</p>
+<!-- elemenf memasukkan javascript internal-->
+
+<script>
+/* 
+
+
+Kode di atas mendefinisikan sebuah anonymous function dan langsung mengeksekusinya menggunakan parentheses (()). Anonymous function adalah sebuah fungsi yang tidak memiliki nama dan biasanya digunakan sebagai argumen untuk fungsi lain atau sebagai ekspresi di dalam kode.
+
+Pada kode di atas, anonymous function yang didefinisikan hanya melakukan log pesan "halo, ini adalah anonymous function" menggunakan fungsi console.log(). Kemudian, hasil dari eksekusi anonymous function tersebut disimpan dalam variabel result.
+
+Karena anonymous function tidak mengembalikan nilai apa pun, maka nilai yang disimpan dalam variabel result adalah undefined. Kemudian, nilai undefined tersebut akan dicetak pada baris terakhir menggunakan fungsi console.log().
+*/
+let result = (function() {
+  console.log("halo,ini adalah anonymous function")
+})();
+
+console.log(result);
+
+</script>
+</body>
+</html>

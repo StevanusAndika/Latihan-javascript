@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Judul Halaman</title>
+  </head>
+  <body> 
+  <script>
+  /*
+Kode di atas merupakan contoh penggunaan closure pada JavaScript. 
+
+Fungsi `perkalian` memiliki satu parameter `a` yang akan dijadikan sebagai variabel `angka` di dalam fungsi tersebut. Kemudian, fungsi `perkalian` mengembalikan sebuah fungsi anonim (tanpa nama) yang memiliki akses ke variabel `angka` tersebut dan juga memiliki parameter `b`.
+
+Di dalam fungsi anonim tersebut, kita mengembalikan hasil perkalian antara variabel `angka` dan parameter `b`. Fungsi `perkalian` sebenarnya berperan sebagai "factory function" untuk membuat fungsi perkalian baru dengan angka yang berbeda.
+
+Setelah fungsi `perkalian` didefinisikan, kita memanggilnya dengan nilai `8` sebagai parameter, dan hasilnya akan disimpan ke dalam variabel `matematika`. `matematika` akan berisi sebuah fungsi baru yang dapat kita panggil dan berisi nilai `8` sebagai variabel `angka`.
+
+Terakhir, kita memanggil fungsi yang disimpan di dalam variabel `matematika` dengan memberikan nilai `10` sebagai parameter `b`, dan hasilnya akan ditampilkan di konsol menggunakan `console.log()`. Hasilnya adalah `80`, yang merupakan hasil perkalian antara nilai `angka` (yang bernilai `8`) dan nilai `b` (yang bernilai `10`).
+
+Dengan menggunakan closure seperti ini, kita dapat membuat fungsi baru yang memiliki akses ke variabel di dalam lingkup fungsi induknya, sehingga kita dapat membuat kode yang lebih modular dan dapat digunakan kembali.
+  */
+  function perkalian(a){
+    var angka = a;
+    return Function(){
+      return angka *b;
+    }
+  }
+  var matematika =perkalian (8);
+  console.log(matematika (10));
+  
+</script>
+  </body>
+</html>

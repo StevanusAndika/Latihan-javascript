@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Judul Halaman</title>
+  </head>
+  <body> 
+  <script>
+  /* penjelasan kode :
+
+
+Kodingan di atas adalah kode JavaScript yang mendefinisikan sebuah objek bernama "kucing" dengan tiga properti: "nama", "kaki", dan "warna". Properti "nama" memiliki nilai "oyen", properti "kaki" memiliki nilai 4, dan properti "warna" memiliki nilai "coklat". 
+
+Selain itu, objek "kucing" juga memiliki sebuah metode bernama "halo", yang mengembalikan sebuah string "halo nama kucing saya :" yang diikuti dengan nilai properti "nama" menggunakan kata kunci "this" untuk merujuk ke objek saat ini.
+
+Jadi, ketika metode "halo" dipanggil pada objek "kucing", ia akan mengembalikan sebuah string yang menggabungkan "halo nama kucing saya :" dan nilai properti "nama" yaitu "oyen". Contoh pemanggilan metode "halo" pada objek "kucing" seperti ini:
+
+kucing.halo(); // akan mengembalikan "halo nama kucing saya :oyen" */
+  
+    var kucing ={
+      "nama" :"oyen",
+      "kaki" : 4,
+      "warna":"coklat",
+      halo(){return "halo nama kucing saya :"+this.nama}
+    }
+    console.log(kucing.halo());
+  </script>
+  </body>
+</html>

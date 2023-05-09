@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+<!--Javascript eksternal-->
+<script src ="index.js"></script>
+</head>
+<body>
+<p>
+Contoh javascript
+</p>
+<!-- elemenf memasukkan javascript internal-->
+
+<script>
+/* 
+Kode tersebut membuat sebuah objek bernama `hari` dengan tiga properti: `namahari`, `namabulan`, dan `waktu`. Properti `namahari` dan `namabulan` berisi string "senin" dan "Agustus" secara berturut-turut, sedangkan properti `waktu` berisi sebuah anonymous function object atau fungsi tanpa nama yang mengembalikan waktu saat ini dalam bentuk string yang mewakili waktu pada saat pemanggilan fungsi tersebut.
+
+Fungsi pada properti `waktu` tersebut menggunakan objek `Date()` untuk mendapatkan waktu saat ini dalam bentuk jam. Setelah itu, dengan menggunakan statement `if else`, fungsi tersebut akan menentukan waktu berdasarkan jam saat ini dan mengembalikan string yang mewakili waktu tersebut, seperti "pagi", "sore", atau "malam". Jika jam saat ini tidak berada dalam rentang waktu tersebut, fungsi akan mengembalikan string "Waktu tidak tersedia".
+
+Pada kode terakhir, fungsi pada properti `waktu` dipanggil dengan menggunakan sintaks `hari.waktu()` dan akan mengembalikan string yang mewakili waktu saat ini, seperti "pagi", "sore", atau "malam". Hal ini dapat berguna dalam pengembangan aplikasi web yang membutuhkan informasi waktu yang spesifik pada saat pemanggilan fungsi.
+
+*/
+var hari = {
+  "namahari": "senin",
+  "namabulan": "Agustus",
+  "waktu": function() {
+    var d = new Date();
+    var jam = d.getHours();
+    
+    if(jam>=8&&jam<12){
+      return "pagi";
+    }
+    else if(jam>=12&&jam<=18){
+      return "Sore";
+    }
+    else if(jam>=18&&jam<=24){
+      return "malam";
+    }
+    else{
+      return "Waktu tidak tersedia";
+    }
+  }
+};
+
+console.log(hari.waktu());
+
+
+</script>
+</body>
+</html>
