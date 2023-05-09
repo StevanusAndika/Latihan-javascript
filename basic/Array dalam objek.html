@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+<!--Javascript eksternal-->
+<script src ="index.js"></script>
+</head>
+<body>
+<p>
+Contoh javascript
+</p>
+<!-- elemenf memasukkan javascript internal-->
+
+<script>
+/*
+Kodingan tersebut membuat objek `stevanus` dan `andika` yang masing-masing memiliki properti `nama`, `usia`, dan `hobi`. Kemudian objek `stevanus` dan `andika` dimasukkan ke dalam array `teman`.
+
+Setelah itu, digunakan fungsi `console.log` untuk menampilkan objek `teman` pada indeks ke-0 dan ke-1, yaitu objek `stevanus` dan `andika`.
+
+Dengan begitu, kodingan tersebut akan menampilkan hasil sebagai berikut:
+
+```
+{ nama: 'Stevanus', usia: 18, hobi: [ 'coding', 'main game', 'baca buku' ] }
+{ nama: 'Andika', usia: 20, hobi: [ 'main musik', 'game' ] }
+```
+
+Dapat dilihat bahwa output menampilkan properti `nama`, `usia`, dan `hobi` dari objek `stevanus` dan `andika` yang ada di dalam array `teman`.
+ */
+var stevanus = {
+  "nama": "Stevanus",
+  "usia": 18,
+  "hobi": ["coding", "main game", "baca buku"]
+};
+
+var andika = {
+  "nama": "Andika",
+  "usia": 20,
+  "hobi": ["main musik", "game"]
+};
+
+var teman = [stevanus, andika];
+
+console.log(teman[0]);
+console.log(teman[1]);
+
+</script>
+</body>
+</html>
