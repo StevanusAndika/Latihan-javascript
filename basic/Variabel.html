@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+<body>
+<script>
+/*deklarasi var adalah scope global atau scope function sementara let dan const adalah  scope blok
+
+variabel var dapat diperbaharui dan dideklarasikan ulang didalam scope nya;
+
+variabel  let dapat diperbaharui namun tidak dapat dideklarasikan ulang; variabel const juga tidak dapat diperbaharui maupun di deklarasikan ulang.
+
+Semuanya akan dinaikkan ke atas scope nya. Namu variabel  var akan diinisialisasi dengan  undefined, let dan const tidak akan diinisialisasi
+
+Sementara  var dan let bisa dideklarasikan tanpa diinisialisasi,const harus diinisialisasi terlebih dahulu pada saat pendeklarasian nya.
+*/
+/*Variabel Lokal dideklarasian didalam sebuah fungsi atau didalam sebuah prosedur. 
+Variabel Global dapat digunakan atau dipanggil atau dikenali oleh semua fungsi / prosedur / dikenali diseluruh program.
+
+*/
+var global="variabel global";
+
+console.log("ini contoh:"+global);
+
+
+function lokal(){
+  let contoh="lokal variabel";
+console.log(lokal);
+
+}
+
+  
+
+  
+
+
+</script>
+</body>
+</html>

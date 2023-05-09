@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+
+</head>
+<body>
+<script>
+/*
+ penjelasan program :
+Kodingan tersebut merupakan contoh dari variabel dengan lingkup blok dalam JavaScript.
+
+Pertama-tama, variabel `usia` dideklarasikan dan diinisialisasi dengan nilai `19`, dan variabel `x` dideklarasikan dan diinisialisasi dengan nilai `20`. Kemudian, terdapat sebuah blok kondisional `if` yang mengecek apakah variabel `usia` sama dengan `19`. Jika kondisi tersebut benar, maka blok kode di dalam `{}` akan dijalankan.
+
+Di dalam blok kode tersebut, terdapat deklarasi variabel `x` yang juga diinisialisasi dengan nilai `15`. Namun, variabel `x` yang dideklarasikan di dalam blok kondisional hanya memiliki lingkup blok atau block scope, artinya variabel ini hanya dapat diakses dan digunakan di dalam blok kode tersebut.
+
+Setelah blok kondisional selesai dijalankan, program akan mencetak nilai dari variabel `x` ke konsol menggunakan `console.log(x)`. Karena variabel `x` yang dideklarasikan di dalam blok kondisional hanya memiliki lingkup blok, sedangkan variabel `x` yang dideklarasikan di luar blok kondisional memiliki lingkup global, maka yang dicetak adalah nilai dari variabel `x` yang memiliki lingkup global, yaitu `20`.
+
+Jadi, output yang dihasilkan dari kodingan tersebut adalah `20`.
+
+*/
+
+let usia = 19;
+let x = 20;
+if(usia == 19){
+let x =15;
+}
+console.log(x);
+
+
+</script>
+</body>
+</html>

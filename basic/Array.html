@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Array dalam JavaScript</title>
+  </head>
+  <body>
+    <h1>Contoh Array dalam JavaScript</h1>
+    
+    <script>
+      // Mendefinisikan array kosong
+      let arr1 = [];
+
+      // Mendefinisikan array dengan elemen
+      let arr2 = [1, 2, 3, 4, 5];
+
+      // Menambahkan elemen ke dalam array
+      arr1.push("hello");
+      arr2.push(6);
+
+      // Menghapus elemen dari array
+      arr2.pop();
+
+      // Menampilkan elemen array
+      document.write("Elemen array arr1: " + arr1 + "<br>");
+      document.write("Elemen array arr2: " + arr2 + "<br>");
+
+      // Mengakses elemen array berdasarkan index
+      document.write("Elemen array arr2 dengan index 2: " + arr2[2] + "<br>");
+
+      // Menghitung jumlah elemen dalam array
+      document.write("Jumlah elemen dalam array arr2: " + arr2.length + "<br>");
+
+      // Looping melalui elemen array
+      document.write("Elemen array arr2: ");
+      for(let i = 0; i < arr2.length; i++) {
+        document.write(arr2[i] + " ");
+      }
+    </script>
+  </body>
+</html>

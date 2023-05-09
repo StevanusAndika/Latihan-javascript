@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+
+</head>
+<body>
+<script>
+/*Aturan scope Variabel:
+variabel  lokal hanya tersedia dalam fungsi yang telah dideklarasikan.
+Variabel global dapat diakses di seluruh dokumen web.
+Variabel yang belum dideklarasikan, tetapi telah diberi nilai (bahkan di dalam fungsi), menjadi global secara otomatis
+*/
+
+var jenisVariabel = "ya";
+
+
+function deteksi () {
+var lokal = "ini variabel  lokal";
+//var dalam fungsi tanpa value akan tetap menjadi variabel global
+var lokal;
+}
+document.write("ini variabel global:", jenisVariabel);
+
+console.log("Ini variabel  lokal", deteksi());
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+<!--Javascript eksternal-->
+
+</head>
+<body>
+<p>
+Contoh javascript
+</p>
+<!-- elemenf memasukkan javascript internal-->
+
+<script>
+/*Pada contoh di atas, kita mencoba untuk membagi angka 1 dengan 0. Operasi tersebut tidak valid karena kita tidak bisa membagi angka dengan 0. Oleh karena itu, hasilnya adalah Infinity
+
+*/
+
+let x = 10 / 0;
+console.log(x); // Output: infinity
+
+/* 
+Pada contoh di atas, kita mencoba untuk membagi angka 10 dengan string "Halo". Namun, operasi tersebut tidak valid karena kita tidak bisa membagi angka dengan string. Oleh karena itu, hasilnya adalah NaN. NaN digunakan untuk merepresentasikan hasil operasi matematika yang tidak valid seperti pembagian nol dengan angka, atau operasi matematika yang melibatkan nilai yang tidak valid seperti undefined.
+*/
+let y = 10 / "Halo";
+
+
+console.log(y); // Output: NaN
+
+</script>
+</body>
+</html>
