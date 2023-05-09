@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+<!--Javascript eksternal-->
+<script src ="index.js"></script>
+</head>
+<body>
+<p>
+Contoh javascript
+</p>
+<!-- elemenf memasukkan javascript internal-->
+
+<script>
+/*Dalam contoh ini, terdapat dua fungsi: `myCallbackFunction` dan `performAction`. Fungsi `myCallbackFunction` hanya mencetak pesan ke konsol. Fungsi `performAction` memiliki satu argumen yaitu `callback`, dan mengambil tindakan tertentu di dalamnya, dan akhirnya memanggil callback function yang diberikan.
+
+Dalam contoh tersebut, ketika fungsi `performAction` dipanggil, ia mencetak pesan "Melakukan tindakan..." ke konsol, dan kemudian memanggil callback function yang diberikan yaitu `myCallbackFunction`. Sehingga, ketika program dijalankan, kita akan melihat pesan "Melakukan tindakan..." dan "Ini adalah callback function." tercetak ke konsol.
+*/
+function myCallbackFunction() {
+  console.log("Ini adalah callback function.");
+}
+
+function performAction(callback) {
+  console.log("Melakukan tindakan...");
+  callback();
+}
+
+performAction(myCallbackFunction);
+
+</script>
+</body>
+</html>
